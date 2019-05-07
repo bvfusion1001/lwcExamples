@@ -1,0 +1,17 @@
+<aura:component>
+    <!-- Public Attributes -->
+    <aura:attribute name="word" type="Object" default=""/>
+    <!-- Private Attributes -->
+    <aura:attribute name="editable" type="Boolean" default="false" access="private"/>
+
+    <div>
+        <aura:if isTrue="{! !v.editable}">
+            {!v.word.value}
+            <lightning:button onclick="{!c.toggleEdit}">Edit</lightning:button>
+        </aura:if>
+        <aura:if isTrue="{!v.editable}">
+            <lightning:input value="{!v.word.value}"/>
+            <lightning:button onclick="{!c.toggleEdit}">Save</lightning:button>
+        </aura:if>
+    </div>
+</aura:component>	

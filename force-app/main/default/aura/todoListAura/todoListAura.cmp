@@ -1,0 +1,29 @@
+<aura:component controller="contactRepository" implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <!-- Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <!-- Attributes -->
+    <aura:attribute name="contacts" type="Contact[]" default="[]"/>
+    <aura:attribute name="words" type="Object[]" default="[{
+        id: '1',
+        value: 'one'
+    },{
+        id: '2',
+        value: 'two'
+    },{
+        id: '3',
+        value: 'three'
+    }]"/>
+
+    <lightning:card title="Aura Component" iconName="standard:lightning_component">
+        <div class="slds-card__body">
+            <aura:iteration items="{!v.contacts}" var="contact">
+                {!contact.Name}
+            </aura:iteration>
+            <aura:iteration items="{!v.words}" var="word">
+                <c:editableWord word="{!word}"/>
+            </aura:iteration>
+            <lightning:button onclick="{!c.addWord}">New</lightning:button>
+        </div>
+    </lightning:card>
+</aura:component>	
