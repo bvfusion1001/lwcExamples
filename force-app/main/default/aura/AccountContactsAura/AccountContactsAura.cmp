@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForRecordHome">
+    <!-- Private Attributes -->
+    <aura:attribute name="contacts" type="Object[]" default="[{id:'1',name:'one'},{id:'2',name:'two'},{id:'3',name:'three'}]" access="private"/>
+
+    <lightning:card title="Contact List (Aura)">
+        <div class="slds-card__body slds-card__body_inner">
+            <ul>
+                <aura:iteration items="{!v.contacts}" var="contact">
+                    <li>{!contact.name}</li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </lightning:card>
+</aura:component>	
