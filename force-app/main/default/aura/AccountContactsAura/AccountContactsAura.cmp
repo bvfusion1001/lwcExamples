@@ -2,9 +2,6 @@
     <!-- Private Attributes -->
     <aura:attribute name="contacts" type="Object[]" access="private"/>
 
-    <!-- Service Components -->
-    <c:dummyContacts aura:id="dummyContactsProviderLwc"/>
-
     <!-- Handlers -->
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
 
@@ -12,7 +9,9 @@
         <div class="slds-card__body slds-card__body_inner">
             <ul>
                 <aura:iteration items="{!v.contacts}" var="contact">
-                    <li>{!contact.Greeting}</li>
+                    <li>
+                        <c:ContactCardAura contact="{!contact}"/>
+                    </li>
                 </aura:iteration>
             </ul>
         </div>

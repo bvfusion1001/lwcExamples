@@ -8,6 +8,12 @@
             ],
             "c/accountContactsLwc": [
                 "accountContactsLwc/accountContactsLwc.js"
+            ],
+            "c/ContactTileLwc": [
+                "ContactTileLwc/ContactTileLwc.js"
+            ],
+            "c/contactTileLwc": [
+                "contactTileLwc/contactTileLwc.js"
             ]
         }
     },

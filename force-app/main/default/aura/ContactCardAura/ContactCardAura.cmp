@@ -1,0 +1,11 @@
+<aura:component>
+    <!-- Public Attributes -->
+    <aura:attribute name="contact" type="Object"/>
+    
+    <lightning:tile label="{!v.contact.Name}" href="{!'/' + v.contact.Id}" class="slds-m-vertical_small">
+        <aura:set attribute="media">
+            <lightning:icon iconName="action:add_contact" size="x-small"/>
+        </aura:set>
+        <p>{!v.contact.Greeting}</p>
+    </lightning:tile>
+</aura:component>	
