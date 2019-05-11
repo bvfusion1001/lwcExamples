@@ -12,7 +12,7 @@
         <div class="slds-card__body slds-card__body_inner">
             <ul>
                 <aura:iteration items="{!v.contacts}" var="contact">
-                    <li>{!contact.Name}</li>
+                    <li>{!contact.Greeting}</li>
                 </aura:iteration>
             </ul>
         </div>

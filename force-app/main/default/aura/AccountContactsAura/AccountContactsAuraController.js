@@ -8,6 +8,10 @@
             if (response.getState() === "SUCCESS") {
                 var contacts = response.getReturnValue();
 
+                contacts.forEach(function(contact) {
+                    contact.Greeting = 'Hello, my name is ' + contact.FirstName + ' and my email is ' + contact.Email + '.';
+                });
+
                 component.set('v.contacts', contacts);
             }
         })
