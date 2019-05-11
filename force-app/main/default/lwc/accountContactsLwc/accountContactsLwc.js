@@ -1,6 +1,14 @@
-import { LightningElement, track } from 'lwc';
-import { getDummyContacts } from 'c/dummyContacts';
+import { LightningElement,track, wire, api } from 'lwc';
+import getAccountContacts from '@salesforce/apex/ContactRepository.getAccountContacts'
 
 export default class AccountContactsLwc extends LightningElement {
-    @track contacts = getDummyContacts();
+    @api recordId;
+
+    @track contacts;
+    @wire(getAccountContacts, {accountId: '$recordId'})
+    accountContacts({data}) {
+        if (data) {
+            this.contacts = data;
+        }
+    }
 }

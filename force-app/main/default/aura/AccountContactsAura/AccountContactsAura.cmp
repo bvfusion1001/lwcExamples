@@ -1,9 +1,8 @@
-<aura:component implements="flexipage:availableForRecordHome">
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="ContactRepository">
     <!-- Private Attributes -->
-    <aura:attribute name="contacts" type="Object[]" default="[{id:'1',name:'one'},{id:'2',name:'two'},{id:'3',name:'three'}]" access="private"/>
+    <aura:attribute name="contacts" type="Object[]" access="private"/>
 
     <!-- Service Components -->
-    <c:dummyContactsProvider aura:id="dummyContactsProviderAura"/>
     <c:dummyContacts aura:id="dummyContactsProviderLwc"/>
 
     <!-- Handlers -->
@@ -13,7 +12,7 @@
         <div class="slds-card__body slds-card__body_inner">
             <ul>
                 <aura:iteration items="{!v.contacts}" var="contact">
-                    <li>{!contact.name}</li>
+                    <li>{!contact.Name}</li>
                 </aura:iteration>
             </ul>
         </div>
