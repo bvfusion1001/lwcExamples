@@ -1,0 +1,3 @@
+<aura:component>
+    <aura:method name="getDummyContacts" action="{!c.getDummyContacts}"/>
+</aura:component>	

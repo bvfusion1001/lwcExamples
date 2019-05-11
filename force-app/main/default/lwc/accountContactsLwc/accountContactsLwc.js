@@ -1,6 +1,6 @@
 import { LightningElement, track } from 'lwc';
-import { getDummyContracts } from 'c/dummyContacts';
+import { getDummyContacts } from 'c/dummyContacts';
 
 export default class AccountContactsLwc extends LightningElement {
-    @track contacts = getDummyContracts();
+    @track contacts = getDummyContacts();
 }
