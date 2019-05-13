@@ -18,4 +18,5 @@ The branch `aura-vs-lwc` walks through the creation of some Aura and LWC compone
 
 * Migrate Aura Components to Lightning Web Components: https://developer.salesforce.com/docs/component-library/documentation/lwc/migrate_introduction
 * Component Library: https://developer.salesforce.com/docs/component-library/
-
+* Base Components: Aura vs. Lightning Web Components: https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.migrate_map_aura_lwc_components
+* Trailhead: https://trailhead.salesforce.com/en/content/learn/modules/lightning-web-components-basics
