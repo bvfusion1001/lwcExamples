@@ -1,3 +1,11 @@
 <template>
-    LWC
+    <lightning-card title="Contact List (LWC)">
+        <div class="slds-card__body slds-card__body_inner">
+            <ul>
+                <template for:each={contacts} for:item="contact">
+                    <li key={contact.Id}>{contact.Name}</li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
 </template>
