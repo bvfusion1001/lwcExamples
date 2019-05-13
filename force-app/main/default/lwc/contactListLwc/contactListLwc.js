@@ -1,5 +1,6 @@
 import { LightningElement, track } from 'lwc';
+import { getContacts } from 'c/dummyContactsProviderLwc';
 
 export default class ContactListLwc extends LightningElement {
-    @track contacts = [{Id:'1',Name:'one'},{Id:'2',Name:'two'},{Id:'3',Name:'three'}];
+    @track contacts = getContacts();
 }
