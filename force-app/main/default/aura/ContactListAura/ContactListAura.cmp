@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="ContactRepository">
     <!-- Private Attributes -->
     <aura:attribute name="contacts" type="Object[]" default="[]" access="private"/>
 
