@@ -8,7 +8,12 @@ export default class ContactListLwc extends LightningElement {
     @wire(getAccountContacts, {accountId: '$recordId'})
     accountContacts({data}) {
         if (data) {
-            this.contacts = data;
+            this.contacts = data.map(contact => {
+                return {
+                    ...contact,
+                    Greeting: `Hi, my name is ${contact.Name}.`
+                }
+            });
         }
     }
 }
