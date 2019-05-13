@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForRecordHome">
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
     <!-- Private Attributes -->
     <aura:attribute name="contacts" type="Object[]" default="[]" access="private"/>
 
@@ -7,7 +7,7 @@
 
     <!-- Handlers -->
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
-        
+
     <lightning:card title="Contact List (Aura)">
         <div class="slds-card__body slds-card__body_inner">
             <ul>
