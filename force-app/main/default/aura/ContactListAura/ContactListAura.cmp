@@ -1,3 +1,6 @@
 <aura:component implements="flexipage:availableForRecordHome">
+    <!-- Private Attributes -->
+    <aura:attribute name="contacts" type="Object[]" default="[{Id:'1',Name:'one'},{Id:'2',Name:'two'},{Id:'3',Name:'three'}]" access="private"/>
+    
     Aura
-</aura:component>	
+</aura:component>
