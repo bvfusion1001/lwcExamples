@@ -5,6 +5,9 @@
         "paths": {
             "c/contactListLwc": [
                 "contactListLwc/contactListLwc.js"
+            ],
+            "c/dummyContactsProviderLwc": [
+                "dummyContactsProviderLwc/dummyContactsProviderLwc.js"
             ]
         }
     },
